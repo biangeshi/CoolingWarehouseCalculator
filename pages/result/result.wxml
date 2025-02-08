@@ -1,0 +1,32 @@
+<view class="container">
+  <view class="header">
+    <text class="title">冷库机械设备选型</text>
+    <text class="subtitle">计算结果：</text>
+  </view>
+
+  <view class="main">
+    <scroll-view class="result-box" scroll-y="true">
+        <view><text class="section-title">输入数据：</text></view>
+        <view><text>冷库长度: {{formData.length}} 米</text></view>
+        <view><text>冷库宽度: {{formData.width}} 米</text></view>
+        <view><text>冷库高度: {{formData.height}} 米</text></view>
+        <view><text>物品名称: {{formData.itemName}}</text></view>
+        <view><text>物品数量: {{formData.itemQuantity}} kg</text></view>
+        <view><text>起始温度: {{formData.startTemp}} ℃</text></view>
+        <view><text>目标温度: {{formData.targetTemp}} ℃</text></view>
+        <view><text>降温时间: {{formData.coolingTime}} 小时</text></view>
+        <view><text>省份: {{formData.province}}</text></view>
+        <view><text>城市: {{formData.city}}</text></view>
+        <view><text>制冷设备类型：{{formData.selectedDeviceType}}</text></view>
+
+        <view><text class="section-title">计算结果：</text></view>
+        <view class="loading-text"><text>等待结果生成，请稍后...</text></view>
+    </scroll-view>
+  </view>
+
+  <view class="footer">
+    <button class="footer-btn" bindtap="onRecalculate">重新计算</button>
+    <button class="footer-btn" bindtap="onEditForm">修改表单</button>
+    <button class="footer-btn" bindtap="onCreateNewForm">新建表单</button>
+  </view>
+</view>

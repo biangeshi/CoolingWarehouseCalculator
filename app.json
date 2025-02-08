@@ -1,0 +1,11 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/result/result"
+  ],
+  "window": {
+    "navigationBarTitleText": "冷库设备选型",
+    "navigationBarTextStyle": "black"
+  },
+  "style": "v2"
+}

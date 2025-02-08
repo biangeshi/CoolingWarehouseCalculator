@@ -1,0 +1,89 @@
+<view class="container">
+  <text class="title">冷库机械设备选型</text>
+  <text class="subtitle">请提供以下数据用于计算：</text>
+
+  <form class="form">
+    <view class="section">
+      <text class="section-title">冷库尺寸</text>
+      <view class="input-group">
+        <view class="input-item">
+          <text class="label">长度</text>
+          <input type="number" placeholder="请输入数字" class="input" data-field="length" bindinput="handleInputChange"/>
+          <text class="unit">米</text>
+        </view>
+        <view class="input-item">
+          <text class="label">宽度</text>
+          <input type="number" placeholder="请输入数字" class="input" data-field="width" bindinput="handleInputChange"/>
+          <text class="unit">米</text>
+        </view>
+        <view class="input-item">
+          <text class="label">高度</text>
+          <input type="number" placeholder="请输入数字" class="input" data-field="height" bindinput="handleInputChange"/>
+          <text class="unit">米</text>
+        </view>
+      </view>
+    </view>
+
+    <view class="section">
+      <text class="section-title">存储物品</text>
+      <view class="input-group">
+        <view class="input-item">
+          <text class="label">物品名称</text>
+          <input type="text" placeholder="请输入物品名称" class="input" data-field="itemName" bindinput="handleInputChange"/>
+        </view>
+        <view class="input-item">
+          <text class="label">数量</text>
+          <input type="number" placeholder="请输入数字" class="input" data-field="itemQuantity" bindinput="handleInputChange"/>
+          <text class="unit">kg</text>
+        </view>
+      </view>
+    </view>
+
+    <view class="section">
+      <text class="section-title">温度要求</text>
+      <view class="input-group">
+        <view class="input-item">
+          <text class="label">起始温度</text>
+          <input type="number" placeholder="请输入数字" class="input" data-field="startTemp" bindinput="handleInputChange"/>
+          <text class="unit">℃</text>
+        </view>
+        <view class="input-item">
+          <text class="label">目标温度</text>
+          <input type="number" placeholder="请输入数字" class="input" data-field="targetTemp" bindinput="handleInputChange"/>
+          <text class="unit">℃</text>
+        </view>
+        <view class="input-item">
+          <text class="label">降温时间</text>
+          <input type="number" placeholder="请输入数字" class="input" data-field="coolingTime" bindinput="handleInputChange"/>
+          <text class="unit">小时</text>
+        </view>
+      </view>
+    </view>
+
+    <view class="section">
+      <text class="section-title">地理位置</text>
+      <view class="input-group">
+        <view class="input-item">
+          <text class="label">省份</text>
+          <input type="text" placeholder="请输入所在省份" class="input" data-field="province" bindinput="handleInputChange"/>
+        </view>
+        <view class="input-item">
+          <text class="label">城市</text>
+          <input type="text" placeholder="请输入所在城市" class="input" data-field="city" bindinput="handleInputChange"/>
+        </view>
+      </view>
+    </view>
+
+    <view class="section">
+      <text class="section-title">制冷设备类型</text>
+      <view class="input-item">
+        <text class="label">设备类型</text>
+        <picker mode="selector" class="input" range="{{deviceTypes}}" bindchange="handleInputChange" data-field="selectedDeviceType">
+          <view class="picker-item">{{selectedDeviceType || '请选择'}}</view>
+        </picker>
+      </view>
+    </view>
+
+    <button class="submit-btn {{submitBtnClass}}" bindtap="onSubmit">提交</button>
+  </form>
+</view>
