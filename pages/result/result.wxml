@@ -1,8 +1,6 @@
 <view class="container">
-  <view class="header">
     <text class="title">冷库机械设备选型</text>
     <text class="subtitle">计算结果：</text>
-  </view>
 
   <view class="main">
     <scroll-view class="result-box" scroll-y="true">
